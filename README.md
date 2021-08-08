@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://yarnpkg.com/">
-    <img alt="bhala" src="https://github.com/ivangabriele/bhala/blob/master/assets/logo.svg?raw=true" width="480">
+    <img alt="bhala" src="https://raw.githubusercontent.com/ivangabriele/bahla/main/assets/logo.svg" width="480">
   </a>
 </p>
 

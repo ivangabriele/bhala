@@ -1,12 +1,12 @@
 import chalk, { Chalk } from 'chalk'
 // import { execSync } from 'child_process'
 
-import * as D from '..'
+import * as T from './types'
 
 import EMOJIS from './constants/emojis'
 import SYMBOLS from './constants/symbols'
 
-class Bahle implements D.Bahle {
+class Bahle implements T.Bahla {
   // prettier-ignore
   constructor(
     public readonly EMO = EMOJIS,
@@ -22,7 +22,7 @@ class Bahle implements D.Bahle {
 
     const input = `${message}`
     const outputChunks: string[] = []
-    const maybeIcon: string | D.OutputOptions | undefined = args[0]
+    const maybeIcon: string | T.OutputOptions | undefined = args[0]
     const hasIcon: boolean = maybeIcon !== undefined && typeof maybeIcon === 'string' && maybeIcon.length > 0
 
     if (hasIcon) {

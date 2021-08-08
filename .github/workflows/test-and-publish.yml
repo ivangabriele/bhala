@@ -1,0 +1,49 @@
+name: Test & Publish
+
+on: [push]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install
+        run: npm install
+      - name: Lint
+        run: npm test:lint
+
+  publish:
+    name: Publish
+    needs: test
+    if: ${{ contains(github.ref, 'refs/tags/') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup (npm)
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Publish on NPM
+        run: npm publish --access=public --workspaces
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Setup (Github)
+        uses: actions/setup-node@v2
+        with:
+          registry-url: "https://npm.pkg.github.com"
+      - name: Publish on Github Packages
+        run: npm publish --access=public --workspaces
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

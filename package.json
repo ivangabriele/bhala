@@ -1,0 +1,65 @@
+{
+  "name": "bhala",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A pretty (!), powerful and customizable logging library for Node.js.",
+  "main": "./dist/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "engine": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "del-cli ./dist",
+    "dev": "npm run build && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
+    "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
+    "dev:watch": "tsc -p ./tsconfig.dev.json -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:lint": "eslint . --ext .js,.ts"
+  },
+  "dependencies": {
+    "chalk": "4.1.0"
+  },
+  "devDependencies": {
+    "@ivangabriele/eslint-config-typescript-base": "1.0.0",
+    "@ivangabriele/prettier-config": "1.1.0",
+    "@types/node": "14.14.37",
+    "@typescript-eslint/eslint-plugin": "4.21.0",
+    "concurrently": "6.0.1",
+    "del-cli": "3.0.1",
+    "eslint-plugin-jest": "24.3.4",
+    "eslint-plugin-prettier": "3.4.0",
+    "jest": "26.6.3",
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1",
+    "typescript": "4.2.3",
+    "wait-on": "5.3.0"
+  },
+  "prettier": "@ivangabriele/prettier-config",
+  "homepage": "https://github.com/ivangabriele/bhala#readme",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/bhala.git"
+  },
+  "author": {
+    "name": "Ivan Gabriele",
+    "email": "ivan.gabriele@gmail.com",
+    "url": "https://www.ivangabriele.com"
+  },
+  "keywords": [
+    "cli",
+    "color",
+    "coloured",
+    "console",
+    "log",
+    "logs",
+    "logger",
+    "logging",
+    "print",
+    "terminal"
+  ]
+}

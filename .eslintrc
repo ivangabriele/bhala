@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": ["@ivangabriele/eslint-config-typescript-base"],
+  "plugins": ["jest"],
+  "rules": {
+    "class-methods-use-this": "off"
+  }
+}

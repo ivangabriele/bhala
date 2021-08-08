@@ -11,7 +11,7 @@
 ---
 
 <p align="center">
-**⚠️ WORK IN PROGRESS // DO NOT USE**
+  <strong>⚠️ WORK IN PROGRESS // DO NOT USE</strong>
 </p>
 
 ---

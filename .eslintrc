@@ -1,9 +1,9 @@
 {
+  "extends": ["@ivangabriele/eslint-config-typescript-base"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": ["@ivangabriele/eslint-config-typescript-base"],
-  "plugins": ["jest"],
+  "ignorePatterns": ["/dist", "/examples"],
   "rules": {
     "class-methods-use-this": "off"
   }

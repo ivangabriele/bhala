@@ -23,5 +23,5 @@
     "target": "es2018"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["build/"]
+  "exclude": ["dist/", "examples/"]
 }

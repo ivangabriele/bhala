@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "A pretty (!), powerful and customizable logging library for Node.js.",
   "main": "./dist/index.js",
-  "types": "./src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "/dist"
   ],
@@ -12,7 +12,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc && cpy --rename=index.d.ts ./src/declaration.ts ./dist && del-cli ./dist/declaration.js",
     "clean": "del-cli ./dist",
     "dev": "npm run build && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
@@ -27,15 +27,12 @@
     "@ivangabriele/eslint-config-typescript-base": "1.0.0",
     "@ivangabriele/prettier-config": "1.1.0",
     "@types/node": "14.14.37",
-    "@typescript-eslint/eslint-plugin": "4.21.0",
     "concurrently": "6.0.1",
+    "cpy-cli": "3.1.1",
     "del-cli": "3.0.1",
-    "eslint-plugin-jest": "24.3.4",
-    "eslint-plugin-prettier": "3.4.0",
     "jest": "26.6.3",
     "nodemon": "2.0.7",
-    "prettier": "2.2.1",
-    "typescript": "4.2.3",
+    "typescript": "4.3.5",
     "wait-on": "5.3.0"
   },
   "prettier": "@ivangabriele/prettier-config",

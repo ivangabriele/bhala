@@ -1,10 +1,9 @@
 import chalk, { Chalk } from 'chalk'
 // import { execSync } from 'child_process'
 
-import * as T from './types'
-
 import EMOJIS from './constants/emojis'
 import SYMBOLS from './constants/symbols'
+import * as T from './types'
 
 class Bahle implements T.Bahla {
   // prettier-ignore

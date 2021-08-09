@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup (npm)
+      - name: Setup
         uses: actions/setup-node@v2
         with:
           node-version: "16"
@@ -39,11 +39,3 @@ jobs:
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Setup (Github)
-        uses: actions/setup-node@v2
-        with:
-          registry-url: "https://npm.pkg.github.com"
-      - name: Publish on Github Packages
-        run: npm publish --access=public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

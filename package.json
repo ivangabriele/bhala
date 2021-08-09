@@ -21,7 +21,7 @@
     "test:lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "4.1.2"
   },
   "devDependencies": {
     "@ivangabriele/eslint-config-typescript-base": "1.0.0",

@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Publish on NPM
-        run: npm publish --access=public --workspaces
+        run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Setup (Github)
@@ -44,6 +44,6 @@ jobs:
         with:
           registry-url: "https://npm.pkg.github.com"
       - name: Publish on Github Packages
-        run: npm publish --access=public --workspaces
+        run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

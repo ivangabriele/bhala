@@ -26,12 +26,12 @@
   "devDependencies": {
     "@ivangabriele/eslint-config-typescript-base": "1.2.0",
     "@ivangabriele/prettier-config": "1.1.0",
-    "@types/node": "14.14.37",
-    "concurrently": "6.0.1",
+    "@types/node": "14.17.9",
+    "concurrently": "6.2.1",
     "cpy-cli": "3.1.1",
     "del-cli": "3.0.1",
     "jest": "26.6.3",
-    "nodemon": "2.0.7",
+    "nodemon": "2.0.12",
     "typescript": "4.3.5",
     "wait-on": "5.3.0"
   },

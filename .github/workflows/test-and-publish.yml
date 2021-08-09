@@ -16,7 +16,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Lint
-        run: npm test:lint
+        run: npm run test:lint
 
   publish:
     name: Publish

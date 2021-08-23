@@ -1,6 +1,6 @@
 {
   "name": "bhala",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "license": "MIT",
   "description": "A pretty (!), powerful and customizable logging library for Node.js.",
   "main": "./dist/index.js",

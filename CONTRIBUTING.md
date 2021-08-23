@@ -15,8 +15,10 @@
     "source.fixAll": true
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": true,
-  "eslint.run": "onSave",
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "eslint.packageManager": "npm",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 ```

@@ -2,7 +2,7 @@ export type OutputOptions = {
   isColorless?: boolean
 }
 
-export interface Bahla {
+export interface Bhala {
   debug(message: string, icon?: string, options?: OutputOptions): void
   debug(message: string, options?: OutputOptions): void
   error(message: string, icon?: string, options?: OutputOptions): void

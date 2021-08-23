@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://yarnpkg.com/">
-    <img alt="bhala" src="https://raw.githubusercontent.com/ivangabriele/bahla/main/assets/logo.svg" width="480">
+    <img alt="bhala" src="https://raw.githubusercontent.com/ivangabriele/bhala/main/assets/logo.svg" width="480">
   </a>
 </p>
 
@@ -33,10 +33,11 @@
     - [`warn()`](#warn)
   - [Options](#options)
     - [`OutputOptions`](#outputoptions)
+- [Name](#name)
 
 ## Usage
 
-A not-so-serious proposed practice is to use the `ß` character to reference **bahla** library.
+A not-so-serious proposed practice is to use the `ß` character to reference **bhala** library.
 
 - Linux: DuckDuckGo it!
 - macOS: <kbd>Option</kbd> + <kbd>s</kbd>
@@ -107,3 +108,12 @@ type OutputOptions = {
   isColorless?: boolean
 }
 ```
+
+## Name
+
+You may wonder why "bhala"? It means "write" in Zulu, which you can learn [how to conjugate][link-bhala] (ngibhala,
+ubhala, etc) if you also love learning new languages 😉.
+
+---
+
+[link-bhala]: https://en.wikipedia.org/wiki/Zulu_grammar#Verbs

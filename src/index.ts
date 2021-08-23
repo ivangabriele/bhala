@@ -5,7 +5,7 @@ import EMOJIS from './constants/emojis'
 import SYMBOLS from './constants/symbols'
 import * as T from './types'
 
-class Bahle implements T.Bahla {
+class Bahle implements T.Bhala {
   // prettier-ignore
   constructor(
     public readonly EMO = EMOJIS,
@@ -78,6 +78,6 @@ class Bahle implements T.Bahla {
   }
 }
 
-const bahla = new Bahle()
-export default bahla
-module.exports = bahla
+const bhala = new Bahle()
+export default bhala
+module.exports = bhala

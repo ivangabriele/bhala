@@ -11,7 +11,24 @@
 ---
 
 <p align="center">
-  <strong>⚠️ WORK IN PROGRESS // DO NOT USE</strong>
+  <a href="https://github.com/ivangabriele/bhala/blob/main/LICENSE">
+    <img
+      alt="Licence"
+      src="https://img.shields.io/github/license/ivangabriele/bhala?style=flat-square"
+    />
+  </a>
+  <a href="https://www.npmjs.com/package/bhala">
+    <img
+      alt="NPM Version"
+      src="https://img.shields.io/npm/v/bhala?style=flat-square"
+    />
+  </a>
+  <a href="https://github.com/ivangabriele/bhala/actions?query=branch%3Amain++">
+    <img
+      alt="GitHub Workflow Status"
+      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Test%20&%20Publish/main?style=flat-square"
+    />
+  </a>
 </p>
 
 ---

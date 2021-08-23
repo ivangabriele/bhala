@@ -17,7 +17,7 @@
     "dev": "npm run build && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "dev:watch": "tsc -p ./tsconfig.dev.json -w",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:lint",
     "test:lint": "eslint . --ext .js,.ts",
     "preversion": "npm test",
     "postversion": "node ./scripts/finalizeVersionBump.js"

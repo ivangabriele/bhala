@@ -17,7 +17,9 @@ class Bahle implements T.Bhala {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private generateOutput(message: string, args: any[], colorize: Chalk): string | undefined {
-    if (message === undefined) return undefined
+    if (message === undefined) {
+      return undefined
+    }
 
     const input = `${message}`
     const outputChunks: string[] = []

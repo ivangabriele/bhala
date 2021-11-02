@@ -12,8 +12,8 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "npm run clean && tsc && cpy --rename=index.d.ts ./src/declaration.ts ./dist && del-cli ./dist/declaration.js",
-    "clean": "del-cli ./dist",
+    "build": "npm run clean && tsc && cp ./src/declaration.ts ./dist/index.d.ts && rm -f ./dist/declaration.js",
+    "clean": "rm -Rf ./dist",
     "dev": "npm run build && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "dev:watch": "tsc -p ./tsconfig.dev.json -w",
@@ -23,19 +23,19 @@
     "postversion": "node ./scripts/finalizeVersionBump.js"
   },
   "dependencies": {
-    "chalk": "4.1.2"
+    "chalk": "4.1.2",
+    "node-emoji": "1.11.0"
   },
   "devDependencies": {
-    "@ivangabriele/eslint-config-typescript-base": "1.3.0",
+    "@ivangabriele/eslint-config-typescript-base": "1.5.0",
     "@ivangabriele/prettier-config": "1.1.0",
-    "@types/node": "14.17.11",
-    "concurrently": "6.2.1",
-    "cpy-cli": "3.1.1",
-    "del-cli": "4.0.1",
-    "jest": "27.0.6",
-    "nodemon": "2.0.12",
+    "@types/node": "14.17.29",
+    "@types/prettier": "2.4.1",
+    "concurrently": "6.3.0",
+    "jest": "27.3.1",
+    "nodemon": "2.0.14",
     "shelljs": "0.8.4",
-    "typescript": "4.3.5",
+    "typescript": "4.4.4",
     "wait-on": "6.0.0"
   },
   "prettier": "@ivangabriele/prettier-config",

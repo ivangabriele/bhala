@@ -1,33 +1,24 @@
-import EMOJIS from './constants/emojis'
-import SYMBOLS from './constants/symbols'
+import emoji from 'node-emoji'
 
-declare const Bahle: Bahle.Bahle
+declare const Bhala: Bhala.Bhala
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-declare namespace Bahle {
+declare namespace Bhala {
   export type OutputOptions = {
     isColorless?: boolean
   }
 
-  export interface Bahle {
-    EMO: typeof EMOJIS
-    SYM: typeof SYMBOLS
+  export interface Bhala {
+    EMO: typeof emoji.emoji
 
-    debug(message: string, icon?: string, options?: OutputOptions): void
-    debug(message: string, options?: OutputOptions): void
-
-    error(message: string, icon?: string, options?: OutputOptions): void
-    error(message: string, options?: OutputOptions): void
-
-    info(message: string, icon?: string, options?: OutputOptions): void
-    info(message: string, options?: OutputOptions): void
-
-    log(message: string, icon?: string, options?: OutputOptions): void
-    log(message: string, options?: OutputOptions): void
-
-    warn(message: string, icon?: string, options?: OutputOptions): void
-    warn(message: string, options?: OutputOptions): void
+    debug(...messages: string[]): void
+    error(...messages: string[]): void
+    event(...messages: string[]): void
+    info(...messages: string[]): void
+    log(...messages: string[]): void
+    success(...messages: string[]): void
+    warn(...messages: string[]): void
   }
 }
 
-export = Bahle
+export = Bhala

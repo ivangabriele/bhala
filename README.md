@@ -36,21 +36,32 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Install](#install)
 - [Usage](#usage)
-- [Settings](#settings)
 - [API](#api)
   - [Contants](#contants)
     - [`EMO`](#emo)
-    - [`SYM`](#sym)
   - [Methods](#methods)
     - [`debug()`](#debug)
     - [`error()`](#error)
+    - [`event()`](#event)
     - [`info()`](#info)
     - [`log()`](#log)
+    - [`success()`](#success)
     - [`warn()`](#warn)
-  - [Options](#options)
-    - [`OutputOptions`](#outputoptions)
 - [Name](#name)
+
+## Install
+
+```sh
+npm i -E bhala
+```
+
+or:
+
+```sh
+yarn add -E bhala
+```
 
 ## Usage
 
@@ -60,7 +71,12 @@ A not-so-serious proposed practice is to use the `ß` character to reference **b
 - macOS: <kbd>Option</kbd> + <kbd>s</kbd>
 - Windows: <kbd>Alt</kbd> + <kbd>2</kbd><kbd>2</kbd><kbd>5</kbd>
 
-## Settings
+```js
+import ß from 'bhala';
+
+ß.log('Here is a wonderful log.');
+ß.event('Here is a wonderful event.');
+```
 
 ## API
 
@@ -68,62 +84,50 @@ A not-so-serious proposed practice is to use the `ß` character to reference **b
 
 #### `EMO`
 
-#### `SYM`
+List of emoji keys that should named like you do in Markdown, i.e.: `computer` for `:computer:`.
 
 ### Methods
-
-All method `options` can be customized globally
 
 #### `debug()`
 
 ```ts
-ß.log(message: string, isColorless?: boolean, options)
-ß.log(message: string, icon?: string, isColorless?: boolean)
+ß.debug(...messages: string[])
 ```
 
 #### `error()`
 
 ```ts
-ß.log(message: string, isColorless?: boolean, options)
-ß.log(message: string, icon?: string, isColorless?: boolean)
+ß.error(...messages: string[])
+```
+
+#### `event()`
+
+```ts
+ß.event(...messages: string[])
 ```
 
 #### `info()`
 
 ```ts
-ß.log(message: string, isColorless?: boolean, options)
-ß.log(message: string, icon?: string, isColorless?: boolean)
+ß.warn(...messages: string[])
 ```
 
 #### `log()`
 
 ```ts
-ß.log(message: string, isColorless?: boolean, options)
-ß.log(message: string, icon?: string, isColorless?: boolean)
+ß.log(...messages: string[])
+```
+
+#### `success()`
+
+```ts
+ß.success(...messages: string[])
 ```
 
 #### `warn()`
 
 ```ts
-ß.log(message: string, options: OutputOptions)
-ß.log(message: string, icon?: string, isColorless?: boolean)
-```
-
-**Examples**
-
-```ts
-ß.log("Some")
-// Output: 
-```
-
-### Options
-
-#### `OutputOptions`
-
-```ts
-type OutputOptions = {
-  isColorless?: boolean
-}
+ß.warn(...messages: string[])
 ```
 
 ## Name

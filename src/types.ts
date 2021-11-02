@@ -1,16 +1,17 @@
+import emoji from 'node-emoji'
+
 export type OutputOptions = {
   isColorless?: boolean
 }
 
 export interface Bhala {
-  debug(message: string, icon?: string, options?: OutputOptions): void
-  debug(message: string, options?: OutputOptions): void
-  error(message: string, icon?: string, options?: OutputOptions): void
-  error(message: string, options?: OutputOptions): void
-  info(message: string, icon?: string, options?: OutputOptions): void
-  info(message: string, options?: OutputOptions): void
-  log(message: string, icon?: string, options?: OutputOptions): void
-  log(message: string, options?: OutputOptions): void
-  warn(message: string, icon?: string, options?: OutputOptions): void
-  warn(message: string, options?: OutputOptions): void
+  EMO: typeof emoji.emoji
+
+  debug(...messages: string[]): void
+  error(...messages: string[]): void
+  event(...messages: string[]): void
+  info(...messages: string[]): void
+  log(...messages: string[]): void
+  success(...messages: string[]): void
+  warn(...messages: string[]): void
 }

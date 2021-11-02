@@ -1,85 +1,103 @@
 import chalk, { Chalk } from 'chalk'
-// import { execSync } from 'child_process'
+import { spawnSync } from 'child_process'
+import emoji from 'node-emoji'
+import os from 'os'
 
-import EMOJIS from './constants/emojis'
-import SYMBOLS from './constants/symbols'
 import * as T from './types'
 
-class Bahle implements T.Bhala {
-  // prettier-ignore
-  constructor(
-    public readonly EMO = EMOJIS,
-    public readonly SYM = SYMBOLS
-  ) {
-    // execSync(`pwsh -c $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding`)
-    // console.log(`constructor()`)
+class Bhala implements T.Bhala {
+  private canEmoji: boolean
+
+  constructor(public readonly EMO = emoji.emoji) {
+    this.canEmoji = !this.isCmd() && process.env.CI === undefined
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private generateOutput(message: string, args: any[], colorize: Chalk): string | undefined {
-    if (message === undefined) {
-      return undefined
+  private generateOutput(
+    messages: string[],
+    defaultColorizer: Chalk,
+    defaultPrefixIcon: string,
+    defaultPrefixText: string,
+  ): string | undefined {
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return ''
     }
 
-    const input = `${message}`
     const outputChunks: string[] = []
-    const maybeIcon: string | T.OutputOptions | undefined = args[0]
-    const hasIcon: boolean = maybeIcon !== undefined && typeof maybeIcon === 'string' && maybeIcon.length > 0
-
-    if (hasIcon) {
-      const coloredIcon: string = colorize(maybeIcon)
-      outputChunks.push(coloredIcon)
-    }
-
-    const coloredInput: string = colorize(`${input}`)
-    outputChunks.push(coloredInput)
+    outputChunks.push(this.canEmoji ? defaultPrefixIcon : defaultColorizer(defaultPrefixText))
+    outputChunks.push(...(this.canEmoji ? messages.map(message => defaultColorizer(`${message}`)) : messages))
 
     const output = outputChunks.join(` `)
 
     return output
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public debug(message: string, ...args: any[]): void {
-    const output = this.generateOutput(message, args, chalk.gray)
+  private isCmd(): boolean {
+    if (os.platform() !== 'win32') {
+      return false
+    }
+
+    try {
+      const result = spawnSync(`ls`, {
+        env: process.env,
+        stdio: 'pipe',
+      })
+
+      return result.error !== undefined
+    } catch (err) {
+      return true
+    }
+  }
+
+  public debug(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.gray, this.EMO.pushpin, 'debug -')
 
     // eslint-disable-next-line no-console
     console.debug(output)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public error(message: string, ...args: any[]): void {
-    const output = this.generateOutput(message, args, chalk.red)
+  public error(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.red, this.EMO.x, 'error -')
 
     // eslint-disable-next-line no-console
     console.error(output)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public info(message: string, ...args: any[]): void {
-    const output = this.generateOutput(message, args, chalk.blue)
-
-    // eslint-disable-next-line no-console
-    console.info(output)
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public log(message: string, ...args: any[]): void {
-    const output = this.generateOutput(message, args, chalk.green)
+  public event(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.magenta, this.EMO.calendar, 'event -')
 
     // eslint-disable-next-line no-console
     console.log(output)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public warn(message: string, ...args: any[]): void {
-    const output = this.generateOutput(message, args, chalk.yellow)
+  public info(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.cyan, this.EMO.information_source, 'info -')
+
+    // eslint-disable-next-line no-console
+    console.info(output)
+  }
+
+  public log(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.white, this.EMO.memo, 'log -')
+
+    // eslint-disable-next-line no-console
+    console.log(output)
+  }
+
+  public success(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.green, this.EMO.heavy_check_mark, 'success -')
+
+    // eslint-disable-next-line no-console
+    console.log(output)
+  }
+
+  public warn(...messages: string[]): void {
+    const output = this.generateOutput(messages, chalk.yellow, this.EMO.warning, 'warning -')
 
     // eslint-disable-next-line no-console
     console.warn(output)
   }
 }
 
-const bhala = new Bahle()
+const bhala = new Bhala()
 export default bhala
 module.exports = bhala

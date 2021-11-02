@@ -30,7 +30,7 @@
   "devDependencies": {
     "@ivangabriele/eslint-config-typescript-base": "1.5.0",
     "@ivangabriele/prettier-config": "1.1.0",
-    "@types/node": "14.17.29",
+    "@types/node": "14.17.32",
     "@types/node-emoji": "1.8.1",
     "@types/prettier": "2.4.1",
     "@types/shelljs": "0.8.9",

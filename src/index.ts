@@ -32,7 +32,7 @@ class Bhala implements T.Bhala {
   }
 
   private isCmd(): boolean {
-    if (window !== undefined) {
+    if (typeof window !== undefined) {
       return false
     }
 

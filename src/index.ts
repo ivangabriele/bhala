@@ -1,5 +1,5 @@
 import chalk, { Chalk } from 'chalk'
-import { spawnSync } from 'child_process'
+import childProcess from 'child_process'
 import emoji from 'node-emoji'
 import os from 'os'
 
@@ -37,7 +37,7 @@ class Bhala implements T.Bhala {
     }
 
     try {
-      const result = spawnSync(`ls`, {
+      const result = childProcess.spawnSync(`ls`, {
         env: process.env,
         stdio: 'pipe',
       })
@@ -99,5 +99,5 @@ class Bhala implements T.Bhala {
 }
 
 const bhala = new Bhala()
+
 export default bhala
-module.exports = bhala

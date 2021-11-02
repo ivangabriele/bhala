@@ -32,6 +32,10 @@ class Bhala implements T.Bhala {
   }
 
   private isCmd(): boolean {
+    if (window !== undefined) {
+      return false
+    }
+
     if (os.platform() !== 'win32') {
       return false
     }

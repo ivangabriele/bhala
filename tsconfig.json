@@ -1,21 +1,16 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "dist/types",
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["es2020"],
-    "module": "commonjs",
+    "lib": ["es2018"],
+    "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
-    "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
@@ -23,5 +18,5 @@
     "target": "es2018"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["dist/", "examples/", "scripts/"]
+  "exclude": ["dist/", "examples/", "scripts/", "rollup.config.js"]
 }

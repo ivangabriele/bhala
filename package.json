@@ -12,9 +12,8 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "npm run clean && tsc && cp ./src/declaration.ts ./dist/index.d.ts && rm ./dist/declaration.js",
+    "build": "rollup -c",
     "clean": "rm -Rf ./dist",
-    "clean:dev": "rimraf ./dist",
     "dev": "concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "dev:watch": "tsc -w",
@@ -24,12 +23,14 @@
     "postversion": "node ./scripts/finalizeVersionBump.js"
   },
   "dependencies": {
-    "chalk": "4.1.2",
-    "node-emoji": "1.11.0"
+    "chalk": "^4.1.2",
+    "node-emoji": "^1.11.0"
   },
   "devDependencies": {
     "@ivangabriele/eslint-config-typescript-base": "1.5.0",
     "@ivangabriele/prettier-config": "1.1.0",
+    "@rollup/plugin-node-resolve": "13.0.6",
+    "@rollup/plugin-typescript": "8.3.0",
     "@types/node": "14.17.32",
     "@types/node-emoji": "1.8.1",
     "@types/prettier": "2.4.1",
@@ -38,6 +39,8 @@
     "jest": "27.3.1",
     "nodemon": "2.0.14",
     "rimraf": "3.0.2",
+    "rollup": "2.59.0",
+    "rollup-plugin-node-polyfills": "0.2.1",
     "shelljs": "0.8.4",
     "typescript": "4.4.4",
     "wait-on": "6.0.0"

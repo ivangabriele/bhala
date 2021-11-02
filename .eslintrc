@@ -3,7 +3,7 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["/dist", "/examples", "/scripts"],
+  "ignorePatterns": ["/dist", "/examples", "/scripts", "rollup.config.js"],
   "rules": {
     "class-methods-use-this": "off"
   }

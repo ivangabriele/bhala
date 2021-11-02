@@ -12,9 +12,11 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "npm run clean && tsc && cp ./src/declaration.ts ./dist/index.d.ts && rm -f ./dist/declaration.js",
+    "build": "npm run clean && tsc && cp ./src/declaration.ts ./dist/index.d.ts && rm ./dist/declaration.js",
+    "build:dev": "npm run clean:dev && tsc",
     "clean": "rm -Rf ./dist",
-    "dev": "npm run build && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
+    "clean:dev": "rimraf ./dist",
+    "dev": "npm run build:dev && wait-on ./dist/index.js && concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "dev:watch": "tsc -p ./tsconfig.dev.json -w",
     "test": "npm run test:lint",
@@ -34,6 +36,7 @@
     "concurrently": "6.3.0",
     "jest": "27.3.1",
     "nodemon": "2.0.14",
+    "rimraf": "3.0.2",
     "shelljs": "0.8.4",
     "typescript": "4.4.4",
     "wait-on": "6.0.0"

@@ -12,13 +12,12 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "rollup -c",
-    "clean": "rm -Rf ./dist",
-    "dev": "concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
-    "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
-    "dev:watch": "tsc -w",
+    "build": "rm -Rf ./dist && rollup -c",
+    "build:watch": "rollup -cw",
+    "dev": "yarn build && concurrently \"yarn build:watch\" \"yarn dev:simulate\"",
+    "dev:simulate": "nodemon --delay 2.5 --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "prepare": "husky install",
-    "test": "npm run test:lint",
+    "test": "yarn test:lint",
     "test:lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {

@@ -19,9 +19,7 @@
     "dev:watch": "tsc -w",
     "prepare": "husky install",
     "test": "npm run test:lint",
-    "test:lint": "eslint . --ext .js,.ts",
-    "preversion": "npm test",
-    "postversion": "node ./scripts/finalizeVersionBump.js"
+    "test:lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {
     "chalk": "^4.1.2",
@@ -31,6 +29,7 @@
     "@ivangabriele/commitlint-config": "1.0.1",
     "@ivangabriele/eslint-config-typescript-base": "1.5.0",
     "@ivangabriele/prettier-config": "1.1.0",
+    "@ivangabriele/semantic-release-config-dist": "1.0.3",
     "@rollup/plugin-node-resolve": "13.0.6",
     "@rollup/plugin-typescript": "8.3.0",
     "@types/node": "16.11.7",
@@ -48,7 +47,13 @@
     "typescript": "4.4.4",
     "wait-on": "6.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "prettier": "@ivangabriele/prettier-config",
+  "release": {
+    "extends": "@ivangabriele/semantic-release-config-dist"
+  },
   "homepage": "https://github.com/ivangabriele/bhala#readme",
   "repository": {
     "type": "git",

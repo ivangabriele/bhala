@@ -26,7 +26,7 @@
   <a href="https://github.com/ivangabriele/bhala/actions?query=branch%3Amain++">
     <img
       alt="GitHub Workflow Status"
-      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Test%20&%20Publish/main?style=flat-square"
+      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Test/main?style=flat-square"
     />
   </a>
 </p>

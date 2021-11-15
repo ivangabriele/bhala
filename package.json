@@ -17,6 +17,7 @@
     "dev": "concurrently \"npm:dev:watch\" \"npm:dev:simulate\"",
     "dev:simulate": "nodemon --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "dev:watch": "tsc -w",
+    "prepare": "husky install",
     "test": "npm run test:lint",
     "test:lint": "eslint . --ext .js,.ts",
     "preversion": "npm test",
@@ -27,6 +28,7 @@
     "node-emoji": "^1.11.0"
   },
   "devDependencies": {
+    "@ivangabriele/commitlint-config": "1.0.1",
     "@ivangabriele/eslint-config-typescript-base": "1.5.0",
     "@ivangabriele/prettier-config": "1.1.0",
     "@rollup/plugin-node-resolve": "13.0.6",
@@ -36,6 +38,7 @@
     "@types/prettier": "2.4.2",
     "@types/shelljs": "0.8.9",
     "concurrently": "6.4.0",
+    "husky": "7.0.4",
     "jest": "27.3.1",
     "nodemon": "2.0.15",
     "rimraf": "3.0.2",

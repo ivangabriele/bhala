@@ -29,7 +29,7 @@
     "@ivangabriele/eslint-config-typescript-base": "2.1.4",
     "@ivangabriele/prettier-config": "2.0.2",
     "@ivangabriele/semantic-release-config-dist": "1.2.0",
-    "@rollup/plugin-node-resolve": "13.1.1",
+    "@rollup/plugin-node-resolve": "13.1.2",
     "@rollup/plugin-typescript": "8.3.0",
     "@types/node": "16.11.17",
     "@types/node-emoji": "1.8.1",

@@ -1,16 +1,8 @@
 {
   "name": "bhala",
+  "description": "A pretty (!), powerful and customizable logging library for Node.js.",
   "version": "2.0.2",
   "license": "MIT",
-  "description": "A pretty (!), powerful and customizable logging library for Node.js.",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
-  "engine": {
-    "node": ">=14"
-  },
   "scripts": {
     "build": "rm -Rf ./dist && rollup -c",
     "build:watch": "rollup -cw",
@@ -47,23 +39,21 @@
     "typescript": "4.5.4",
     "wait-on": "6.0.0"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "prettier": "@ivangabriele/prettier-config",
-  "release": {
-    "extends": "@ivangabriele/semantic-release-config-base"
-  },
-  "homepage": "https://github.com/ivangabriele/bhala#readme",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/bhala.git"
-  },
   "author": {
     "name": "Ivan Gabriele",
     "email": "ivan.gabriele@gmail.com",
     "url": "https://www.ivangabriele.com"
   },
+  "bugs": {
+    "url": "https://github.com/ivangabriele/bhala/issues"
+  },
+  "engine": {
+    "node": ">=14"
+  },
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/ivangabriele/bhala#readme",
   "keywords": [
     "cli",
     "color",
@@ -75,5 +65,18 @@
     "logging",
     "print",
     "terminal"
-  ]
+  ],
+  "main": "./dist/index.js",
+  "prettier": "@ivangabriele/prettier-config",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": "@ivangabriele/semantic-release-config-base"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangabriele/bhala.git"
+  },
+  "types": "./dist/index.d.ts"
 }

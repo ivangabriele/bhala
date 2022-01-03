@@ -560,14 +560,13 @@
   dependencies:
     prettier "2.4.1"
 
-"@ivangabriele/semantic-release-config-dist@1.2.0":
+"@ivangabriele/semantic-release-config-base@1.2.0":
   version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@ivangabriele/semantic-release-config-dist/-/semantic-release-config-dist-1.2.0.tgz#5be97ccaf5972182f3f2f229b484c3465c599328"
-  integrity sha512-U6v03+ra6uKCvdWdNResO2R7gISdRmkhMyOcNF+zNvEhXHVf4brXelIRpENNIxpRtq9CUlpVax8H/AEHeky+nw==
+  resolved "https://registry.yarnpkg.com/@ivangabriele/semantic-release-config-base/-/semantic-release-config-base-1.2.0.tgz#0ba8a21db3eab1cb8c89e646a4fb9a39d7902974"
+  integrity sha512-TEoQGU7qNnBfI6tkJ4+3dOjnYqt7lz360N3sn0Oof8UpqYlHo6FJ6gMFEC2XwY8eVBE/eJCWKFo0mIq6+ccH0w==
   dependencies:
     "@semantic-release/changelog" "6.0.1"
     "@semantic-release/commit-analyzer" "9.0.1"
-    "@semantic-release/exec" "6.0.2"
     "@semantic-release/git" "10.0.1"
     "@semantic-release/github" "8.0.2"
     "@semantic-release/npm" "8.0.3"
@@ -1078,18 +1077,6 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-3.0.0.tgz#30a3b97bbb5844d695eb22f9d3aa40f6a92770c2"
   integrity sha512-5hiM4Un+tpl4cKw3lV4UgzJj+SmfNIDCLLw0TepzQxz9ZGV5ixnqkzIVF+3tp0ZHgcMKE+VNGHJjEeyFG2dcSw==
-
-"@semantic-release/exec@6.0.2":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@semantic-release/exec/-/exec-6.0.2.tgz#1eba943170595192083e71c7788823c570443bbb"
-  integrity sha512-ciaqJTHB1TFtU6C78xrgmoNI9UyfheR9+Bk6Ico7CJ7+ADOEAvUrPBKvz64UCfoWlg+SlKGTVGbFnA509wRUVw==
-  dependencies:
-    "@semantic-release/error" "^3.0.0"
-    aggregate-error "^3.0.0"
-    debug "^4.0.0"
-    execa "^5.0.0"
-    lodash "^4.17.4"
-    parse-json "^5.0.0"
 
 "@semantic-release/git@10.0.1":
   version "10.0.1"

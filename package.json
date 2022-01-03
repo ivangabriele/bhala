@@ -29,7 +29,7 @@
     "@ivangabriele/commitlint-config": "1.0.2",
     "@ivangabriele/eslint-config-typescript-base": "2.1.4",
     "@ivangabriele/prettier-config": "2.0.2",
-    "@ivangabriele/semantic-release-config-dist": "1.2.0",
+    "@ivangabriele/semantic-release-config-base": "1.2.0",
     "@rollup/plugin-node-resolve": "13.1.2",
     "@rollup/plugin-typescript": "8.3.0",
     "@types/node": "16.11.17",
@@ -52,7 +52,7 @@
   },
   "prettier": "@ivangabriele/prettier-config",
   "release": {
-    "extends": "@ivangabriele/semantic-release-config-dist"
+    "extends": "@ivangabriele/semantic-release-config-base"
   },
   "homepage": "https://github.com/ivangabriele/bhala#readme",
   "repository": {

@@ -17,11 +17,12 @@
     "dev": "yarn build && concurrently \"yarn build:watch\" \"yarn dev:simulate\"",
     "dev:simulate": "nodemon --delay 2.5 --watch ./dist --watch ./examples/demo.js ./examples/demo.js",
     "prepare": "husky install",
-    "test": "yarn test:lint",
+    "test": "yarn test:lint && yarn test:e2e",
+    "test:e2e": "yarn build && node ./examples/demo.js",
     "test:lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.2",
     "node-emoji": "^1.11.0"
   },
   "devDependencies": {

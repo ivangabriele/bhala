@@ -26,7 +26,7 @@
   <a href="https://github.com/ivangabriele/bhala/actions?query=branch%3Amain++">
     <img
       alt="GitHub Workflow Status"
-      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Test/main?style=flat-square"
+      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Check/main?style=flat-square"
     />
   </a>
 </p>
@@ -109,7 +109,7 @@ List of emoji keys that should named like you do in Markdown, i.e.: `computer` f
 #### `info()`
 
 ```ts
-ß.warn(...messages: string[])
+ß.info(...messages: string[])
 ```
 
 #### `log()`

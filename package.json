@@ -28,7 +28,7 @@
     "@types/node-emoji": "1.8.1",
     "@types/prettier": "2.4.2",
     "@types/shelljs": "0.8.10",
-    "concurrently": "6.5.1",
+    "concurrently": "7.0.0",
     "husky": "7.0.4",
     "jest": "27.4.7",
     "nodemon": "2.0.15",

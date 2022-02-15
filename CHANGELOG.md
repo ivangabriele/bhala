@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/ivangabriele/bhala/compare/v3.0.1...v3.0.2) (2022-02-15)
+
+
+### Bug Fixes
+
+* add missing * in npmignore ([7043950](https://github.com/ivangabriele/bhala/commit/7043950a09731c4a521523fade4c7327952cea12))
+
 ## [3.0.1](https://github.com/ivangabriele/bhala/compare/v3.0.0...v3.0.1) (2022-02-15)
 
 

@@ -1,6 +1,4 @@
-import childProcess from 'child_process'
 import { cyan, gray, green, magenta, red, white, yellow } from 'colorette'
-import os from 'os'
 
 import * as T from './types'
 
@@ -10,7 +8,7 @@ class Bhala implements T.Bhala {
   private canEmoji: boolean
 
   constructor() {
-    this.canEmoji = !this.isCmd() && !this.isCi()
+    this.canEmoji = !this.isCi()
   }
 
   public debug(...messages: any[]): void {
@@ -79,27 +77,6 @@ class Bhala implements T.Bhala {
     const output = outputChunks.join(` `)
 
     return output
-  }
-
-  private isCmd(): boolean {
-    if (typeof window !== undefined) {
-      return false
-    }
-
-    if (os.platform() !== 'win32') {
-      return false
-    }
-
-    try {
-      const result = childProcess.spawnSync(`ls`, {
-        env: process.env,
-        stdio: 'pipe',
-      })
-
-      return result.error !== undefined
-    } catch (err) {
-      return true
-    }
   }
 
   private isCi(): boolean {

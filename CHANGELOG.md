@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/ivangabriele/bhala/compare/v3.0.3...v3.0.4) (2022-02-15)
+
+
+### Bug Fixes
+
+* remove node builtin import ([6a93b2b](https://github.com/ivangabriele/bhala/commit/6a93b2b9ed452e2ee9732c36bf0a6bf0cc226bf8))
+
 ## [3.0.3](https://github.com/ivangabriele/bhala/compare/v3.0.2...v3.0.3) (2022-02-15)
 
 

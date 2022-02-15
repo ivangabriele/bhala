@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/ivangabriele/bhala/compare/v3.0.2...v3.0.3) (2022-02-15)
+
+
+### Bug Fixes
+
+* migrate from chalk to colorette ([246b506](https://github.com/ivangabriele/bhala/commit/246b506ebc71b69c1c9436e9445a159d21d0101e))
+
 ## [3.0.2](https://github.com/ivangabriele/bhala/compare/v3.0.1...v3.0.2) (2022-02-15)
 
 

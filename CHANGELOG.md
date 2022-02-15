@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/ivangabriele/bhala/compare/v3.0.0...v3.0.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* ignore all useless files in dist ([4504825](https://github.com/ivangabriele/bhala/commit/45048254c31e3a813e8c19c8738cc36d9aa95e5a))
+
 # [3.0.0](https://github.com/ivangabriele/bhala/compare/v2.1.0...v3.0.0) (2022-02-15)
 
 

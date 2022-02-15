@@ -1,11 +1,11 @@
-const ß = require('..')
+import { B } from '../dist/index.js'
 
-ß.debug(`This is a debug.`)
-ß.error(`This is an error.`)
-ß.event(`This is an event.`)
-ß.info(`This is an info.`)
-ß.log(`This is a log.`)
-ß.success(`This is a success.`)
-ß.warn(`This is a warning.`)
+B.debug(`This is a debug.`)
+B.error(`This is an error.`)
+B.event(`This is an event.`)
+B.info(`This is an info.`)
+B.log(`This is a log.`)
+B.success(`This is a success.`)
+B.warn(`This is a warning.`)
 
-ß.log(`This is a log with accented chars: àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ.`)
+B.log(`This is a log with accented chars: àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ.`)

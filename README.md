@@ -40,7 +40,6 @@
 - [Usage](#usage)
 - [API](#api)
   - [Contants](#contants)
-    - [`EMO`](#emo)
   - [Methods](#methods)
     - [`debug()`](#debug)
     - [`error()`](#error)
@@ -49,7 +48,6 @@
     - [`log()`](#log)
     - [`success()`](#success)
     - [`warn()`](#warn)
-- [Name](#name)
 
 ## Install
 
@@ -65,76 +63,57 @@ yarn add -E bhala
 
 ## Usage
 
-A not-so-serious proposed practice is to use the `ß` character to reference **bhala** library.
-
-- Linux: DuckDuckGo it!
-- macOS: <kbd>Option</kbd> + <kbd>s</kbd>
-- Windows: <kbd>Alt</kbd> + <kbd>2</kbd><kbd>2</kbd><kbd>5</kbd>
-
 ```js
-import ß from 'bhala';
+import { B } from 'bhala';
 
-ß.log('Here is a wonderful log.');
-ß.event('Here is a wonderful event.');
+B.log('Here is a wonderful log.');
+B.event('Here is a wonderful event.');
 ```
 
 ## API
 
 ### Contants
 
-#### `EMO`
-
-List of emoji keys that should named like you do in Markdown, i.e.: `computer` for `:computer:`.
-
 ### Methods
 
 #### `debug()`
 
 ```ts
-ß.debug(...messages: string[])
+B.debug(...messages: string[])
 ```
 
 #### `error()`
 
 ```ts
-ß.error(...messages: string[])
+B.error(...messages: string[])
 ```
 
 #### `event()`
 
 ```ts
-ß.event(...messages: string[])
+B.event(...messages: string[])
 ```
 
 #### `info()`
 
 ```ts
-ß.info(...messages: string[])
+B.info(...messages: string[])
 ```
 
 #### `log()`
 
 ```ts
-ß.log(...messages: string[])
+B.log(...messages: string[])
 ```
 
 #### `success()`
 
 ```ts
-ß.success(...messages: string[])
+B.success(...messages: string[])
 ```
 
 #### `warn()`
 
 ```ts
-ß.warn(...messages: string[])
+B.warn(...messages: string[])
 ```
-
-## Name
-
-You may wonder why "bhala"? It means "write" in Zulu, which you can learn [how to conjugate][link-bhala] (ngibhala,
-ubhala, etc) if you also love learning new languages 😉.
-
----
-
-[link-bhala]: https://en.wikipedia.org/wiki/Zulu_grammar#Verbs

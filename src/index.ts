@@ -1,63 +1,62 @@
 import chalk from 'chalk'
 import childProcess from 'child_process'
-import emoji from 'node-emoji'
 import os from 'os'
 
 import * as T from './types'
 
-import type { Chalk } from 'chalk'
+import type { ChalkInstance } from 'chalk'
 
 class Bhala implements T.Bhala {
   private canEmoji: boolean
 
-  constructor(public readonly EMO = emoji.emoji) {
+  constructor() {
     this.canEmoji = !this.isCmd() && !this.isCi()
   }
 
   public debug(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.gray, this.EMO.pushpin, 'debug -')
+    const output = this.generateOutput(messages, chalk.gray, '🔧', 'debug -')
 
     // eslint-disable-next-line no-console
     console.debug(output)
   }
 
   public error(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.red, this.EMO.x, 'error -')
+    const output = this.generateOutput(messages, chalk.red, '❌', 'error -')
 
     // eslint-disable-next-line no-console
     console.error(output)
   }
 
   public event(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.magenta, this.EMO.calendar, 'event -')
+    const output = this.generateOutput(messages, chalk.magenta, '📅', 'event -')
 
     // eslint-disable-next-line no-console
     console.log(output)
   }
 
   public info(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.cyan, this.EMO.information_source, 'info -')
+    const output = this.generateOutput(messages, chalk.cyan, '📢', 'info -')
 
     // eslint-disable-next-line no-console
     console.info(output)
   }
 
   public log(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.white, this.EMO.memo, 'log -')
+    const output = this.generateOutput(messages, chalk.white, '📝', 'log -')
 
     // eslint-disable-next-line no-console
     console.log(output)
   }
 
   public success(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.green, this.EMO.heavy_check_mark, 'success -')
+    const output = this.generateOutput(messages, chalk.green, '🎉', 'success -')
 
     // eslint-disable-next-line no-console
     console.log(output)
   }
 
   public warn(...messages: any[]): void {
-    const output = this.generateOutput(messages, chalk.yellow, this.EMO.warning, 'warning -')
+    const output = this.generateOutput(messages, chalk.yellow, '🔔', 'warning -')
 
     // eslint-disable-next-line no-console
     console.warn(output)
@@ -65,7 +64,7 @@ class Bhala implements T.Bhala {
 
   private generateOutput(
     messages: any[],
-    defaultColorizer: Chalk,
+    defaultColorizer: ChalkInstance,
     defaultPrefixIcon: string,
     defaultPrefixText: string,
   ): string | undefined {
@@ -108,6 +107,6 @@ class Bhala implements T.Bhala {
   }
 }
 
-const bhala = new Bhala()
+const B = new Bhala()
 
-export default bhala
+export { B }

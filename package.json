@@ -22,7 +22,7 @@
     "test:lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {
-    "chalk": "^5.0.0"
+    "colorette": "2.0.16"
   },
   "devDependencies": {
     "@commitlint/cli": "16.1.0",

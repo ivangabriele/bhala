@@ -1,63 +1,65 @@
 import { cyan, gray, green, magenta, red, white, yellow } from 'colorette'
 
-import * as T from './types'
+import type * as T from './types'
 
 import type { Color } from 'colorette'
 
 class Bhala implements T.Bhala {
   private canEmoji: boolean
+  private console: Console
 
   constructor() {
     this.canEmoji = !this.isCi()
+    this.console = console
   }
 
   public debug(...messages: any[]): void {
     const output = this.generateOutput(messages, gray, '🔧', 'debug -')
 
     // eslint-disable-next-line no-console
-    console.debug(output)
+    this.console.debug(output)
   }
 
   public error(...messages: any[]): void {
     const output = this.generateOutput(messages, red, '❌', 'error -')
 
     // eslint-disable-next-line no-console
-    console.error(output)
+    this.console.error(output)
   }
 
   public event(...messages: any[]): void {
     const output = this.generateOutput(messages, magenta, '📅', 'event -')
 
     // eslint-disable-next-line no-console
-    console.log(output)
+    this.console.log(output)
   }
 
   public info(...messages: any[]): void {
     const output = this.generateOutput(messages, cyan, '📢', 'info -')
 
     // eslint-disable-next-line no-console
-    console.info(output)
+    this.console.info(output)
   }
 
   public log(...messages: any[]): void {
     const output = this.generateOutput(messages, white, '📝', 'log -')
 
     // eslint-disable-next-line no-console
-    console.log(output)
+    this.console.log(output)
   }
 
   public success(...messages: any[]): void {
     const output = this.generateOutput(messages, green, '🎉', 'success -')
 
     // eslint-disable-next-line no-console
-    console.log(output)
+    this.console.log(output)
   }
 
   public warn(...messages: any[]): void {
     const output = this.generateOutput(messages, yellow, '🔔', 'warning -')
 
     // eslint-disable-next-line no-console
-    console.warn(output)
+    this.console.warn(output)
   }
 
   private generateOutput(
@@ -72,15 +74,15 @@ class Bhala implements T.Bhala {
 
     const outputChunks: string[] = []
     outputChunks.push(this.canEmoji ? defaultPrefixIcon : defaultColorizer(defaultPrefixText))
-    outputChunks.push(...(this.canEmoji ? messages.map(message => defaultColorizer(`${message}`)) : messages))
+    outputChunks.push(...(this.canEmoji ? messages.map((message) => defaultColorizer(`${message}`)) : messages))
 
-    const output = outputChunks.join(` `)
+    const output = outputChunks.join(' ')
 
     return output
   }
 
   private isCi(): boolean {
-    return typeof process !== undefined && typeof process.env !== undefined && process.env.CI !== undefined
+    return typeof process !== 'undefined' && Boolean(process?.env?.CI)
   }
 }
 

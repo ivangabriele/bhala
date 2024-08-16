@@ -1,0 +1,13 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
+  "extends": ["@ivangabriele/biome-config"],
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noConsoleLog": "off",
+        // Reason: This is a logger library, we don't need to be explicit about the type of the message.
+        "noExplicitAny": "off"
+      }
+    }
+  }
+}

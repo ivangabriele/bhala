@@ -17,7 +17,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Lint
-        run: npm run test:lint
+        run: yarn test:lint
 
   test_e2e:
     name: E2E Test

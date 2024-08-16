@@ -530,6 +530,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/config-conventional@npm:18.6.0":
+  version: 18.6.0
+  resolution: "@commitlint/config-conventional@npm:18.6.0"
+  dependencies:
+    conventional-changelog-conventionalcommits: "npm:^7.0.2"
+  checksum: 10c0/656ad2d64468da3087f46abeaf09574de7b2a649eac14f4710d06cbd3d6a6085aacb0c498a8b2ac86ca66503774344fa3b2cb2070d66eac5a3c0c5adc91e132e
+  languageName: node
+  linkType: hard
+
 "@commitlint/config-validator@npm:^17.8.1":
   version: 17.8.1
   resolution: "@commitlint/config-validator@npm:17.8.1"
@@ -780,14 +789,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivangabriele/commitlint-config@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@ivangabriele/commitlint-config@npm:1.0.5"
+"@ivangabriele/commitlint-config@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@ivangabriele/commitlint-config@npm:2.0.3"
+  dependencies:
+    "@commitlint/config-conventional": "npm:18.6.0"
   peerDependencies:
-    "@commitlint/cli": ^16.1.0
-    "@commitlint/config-conventional": ^16.0.0
-    husky: ^7.0.4
-  checksum: 10c0/a7e99d3aeee0499a7f7846cb956d1021834cfbccc1a75ef1ea103f3d2a269bacbc5f9a48299006652d421d4969d500d5ccc902bde233d4501f4757ff46c2f02d
+    "@commitlint/cli": ^18
+    husky: ^9
+  checksum: 10c0/1ab25a844729ff9c74af03576270338a1cfcad2615d19db37a7a20bd95ce9f353c965774c7252a4f164831eb92047ee6d36c71636fd8d3b55f29a9eef46db0ec
   languageName: node
   linkType: hard
 
@@ -2543,7 +2553,7 @@ __metadata:
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@ivangabriele/biome-config": "npm:1.2.0"
-    "@ivangabriele/commitlint-config": "npm:1.0.5"
+    "@ivangabriele/commitlint-config": "npm:2.0.3"
     "@ivangabriele/prettier-config": "npm:3.0.2"
     "@ivangabriele/semantic-release-config-base": "npm:2.0.2"
     "@rollup/plugin-node-resolve": "npm:13.3.0"
@@ -3290,6 +3300,15 @@ __metadata:
     lodash: "npm:^4.17.15"
     q: "npm:^1.5.1"
   checksum: 10c0/f3b5e6132ec03dad4aa4a2b5ac47ee0e2ae8be6d0fa53a131c722412ce7c02a742c190790f15b5ab4983a31ce90b7066ce1f3f3d5cc4253aa3484ee414259bd2
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
+  dependencies:
+    compare-func: "npm:^2.0.0"
+  checksum: 10c0/3cb1eab35e37fc973cfb3aed0e159f54414e49b222988da1c2aa86cc8a87fe7531491bbb7657fe5fc4dc0e25f5b50e2065ba8ac71cc4c08eed9189102a2b81bd
   languageName: node
   linkType: hard
 

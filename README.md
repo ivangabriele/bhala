@@ -13,20 +13,20 @@
 <p align="center">
   <a href="https://github.com/ivangabriele/bhala/blob/main/LICENSE">
     <img
-      alt="Licence"
-      src="https://img.shields.io/github/license/ivangabriele/bhala?style=flat-square"
+      alt="MIT Licence"
+      src="https://img.shields.io/github/license/ivangabriele/bhala?style=for-the-badge"
     />
   </a>
   <a href="https://www.npmjs.com/package/bhala">
     <img
       alt="NPM Version"
-      src="https://img.shields.io/npm/v/bhala?style=flat-square"
+      src="https://img.shields.io/npm/v/bhala?style=for-the-badge"
     />
   </a>
-  <a href="https://github.com/ivangabriele/bhala/actions?query=branch%3Amain++">
+  <a href="https://github.com/ivangabriele/bhala/actions?query=branch%3Amain+workflow%3ACheck++">
     <img
-      alt="GitHub Workflow Status"
-      src="https://img.shields.io/github/workflow/status/ivangabriele/bhala/Check/main?style=flat-square"
+      alt="Check Workflow Status"
+      src="https://img.shields.io/github/actions/workflow/status/ivangabriele/bhala/check.yml?label=CI&style=for-the-badge"
     />
   </a>
 </p>
@@ -64,10 +64,10 @@ yarn add -E bhala
 ## Usage
 
 ```js
-import { B } from 'bhala';
+import { B } from 'bhala'
 
-B.log('Here is a wonderful log.');
-B.event('Here is a wonderful event.');
+B.log('Here is a wonderful log.')
+B.event('Here is a wonderful event.')
 ```
 
 ## API

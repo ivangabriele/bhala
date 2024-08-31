@@ -781,12 +781,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivangabriele/biome-config@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@ivangabriele/biome-config@npm:1.2.0"
+"@ivangabriele/biome-config@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@ivangabriele/biome-config@npm:1.5.0"
   peerDependencies:
     "@biomejs/biome": ^1
-  checksum: 10c0/8c4ee3831889a269136cf3d76759a77119c2d9f7dd3fc23521677125930fb1881eadbd35dba74dde58ddaefbc72d7055c6353217622e4ac253759eeae4fa112d
+  checksum: 10c0/3fe3064562d12d9fb797c3e24044c88ce14cae0b80586849dfc0830750a8de42bd685987ef9491bb25cacd6ece9e88bb397c7a3d9c909543ccd8f88d8c999719
   languageName: node
   linkType: hard
 
@@ -2046,10 +2046,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.18.105":
-  version: 16.18.105
-  resolution: "@types/node@npm:16.18.105"
-  checksum: 10c0/c206e3a7c150ec858d8f9ed5a7f125cf31559db088d6133f98bdddfcee13ab3fc293203a3e355bdccda91cc85c232f471213d9f3f8253fe4b6b9c330d52f32e4
+"@types/node@npm:16.18.106":
+  version: 16.18.106
+  resolution: "@types/node@npm:16.18.106"
+  checksum: 10c0/0b371ac80fab5e8fffc30cbfb88a8e9f94421c9094109c9114349966d47ee36d31a4f3592e0dbf93c0564162a16708ccb1b4189095ba1b3691f2cc10c82596b4
   languageName: node
   linkType: hard
 
@@ -2510,13 +2510,13 @@ __metadata:
     "@biomejs/biome": "npm:1.8.3"
     "@commitlint/cli": "npm:17.8.1"
     "@commitlint/config-conventional": "npm:17.8.1"
-    "@ivangabriele/biome-config": "npm:1.2.0"
+    "@ivangabriele/biome-config": "npm:1.5.0"
     "@ivangabriele/commitlint-config": "npm:1.1.0"
     "@ivangabriele/prettier-config": "npm:3.2.0"
     "@ivangabriele/semantic-release-config-base": "npm:2.1.0"
     "@rollup/plugin-node-resolve": "npm:13.3.0"
     "@rollup/plugin-typescript": "npm:8.5.0"
-    "@types/node": "npm:16.18.105"
+    "@types/node": "npm:16.18.106"
     colorette: "npm:2.0.20"
     concurrently: "npm:7.6.0"
     husky: "npm:8.0.3"

@@ -1671,20 +1671,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:8.5.0":
-  version: 8.5.0
-  resolution: "@rollup/plugin-typescript@npm:8.5.0"
+"@rollup/plugin-typescript@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@rollup/plugin-typescript@npm:12.1.0"
   dependencies:
-    "@rollup/pluginutils": "npm:^3.1.0"
-    resolve: "npm:^1.17.0"
+    "@rollup/pluginutils": "npm:^5.1.0"
+    resolve: "npm:^1.22.1"
   peerDependencies:
-    rollup: ^2.14.0
+    rollup: ^2.14.0||^3.0.0||^4.0.0
     tslib: "*"
     typescript: ">=3.7.0"
   peerDependenciesMeta:
+    rollup:
+      optional: true
     tslib:
       optional: true
-  checksum: 10c0/5754571abadf915244bc5b6c62f8aa3f7fe43009a3e9b5a174e11b7f635efbaf379f87fa169914be959d38bea675ab61d380d394d3da637a27f46471f9e47ab6
+  checksum: 10c0/46ebb87e52e1aac334f80cfa601096e25a8ce97cf43c68d42e72c8d5f9b7acd074d185c3ef98274930b3f56f47d7370a2837e4c909dc4e320a09bf6e48fc100d
   languageName: node
   linkType: hard
 
@@ -1698,6 +1700,22 @@ __metadata:
   peerDependencies:
     rollup: ^1.20.0||^2.0.0
   checksum: 10c0/7151753160d15ba2b259461a6c25b3932150994ea52dba8fd3144f634c7647c2e56733d986e2c15de67c4d96a9ee7d6278efa6d2e626a7169898fd64adc0f90c
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^5.1.0":
+  version: 5.1.2
+  resolution: "@rollup/pluginutils@npm:5.1.2"
+  dependencies:
+    "@types/estree": "npm:^1.0.0"
+    estree-walker: "npm:^2.0.2"
+    picomatch: "npm:^2.3.1"
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  checksum: 10c0/30f4a98e91a8699b6666b64ecdc665439bd53dddbe964bbeca56da81ff889cfde3a3e059144b80c5a2d9b48aa158df18a45e9a847a33b757d3e8336b278b8836
   languageName: node
   linkType: hard
 
@@ -1993,6 +2011,13 @@ __metadata:
   version: 0.0.39
   resolution: "@types/estree@npm:0.0.39"
   checksum: 10c0/f0af6c95ac1988c4827964bd9d3b51d24da442e2188943f6dfcb1e1559103d5d024d564b2e9d3f84c53714a02a0a7435c7441138eb63d9af5de4dfc66cdc0d92
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:^1.0.0":
+  version: 1.0.6
+  resolution: "@types/estree@npm:1.0.6"
+  checksum: 10c0/cdfd751f6f9065442cd40957c07fd80361c962869aa853c1c2fd03e101af8b9389d8ff4955a43a6fcfa223dd387a089937f95be0f3eec21ca527039fd2d9859a
   languageName: node
   linkType: hard
 
@@ -2515,7 +2540,7 @@ __metadata:
     "@ivangabriele/prettier-config": "npm:3.2.0"
     "@ivangabriele/semantic-release-config-base": "npm:2.1.0"
     "@rollup/plugin-node-resolve": "npm:13.3.0"
-    "@rollup/plugin-typescript": "npm:8.5.0"
+    "@rollup/plugin-typescript": "npm:12.1.0"
     "@types/node": "npm:16.18.105"
     colorette: "npm:2.0.20"
     concurrently: "npm:7.6.0"
@@ -3784,6 +3809,13 @@ __metadata:
   version: 1.0.1
   resolution: "estree-walker@npm:1.0.1"
   checksum: 10c0/fa9e5f8c1bbe8d01e314c0f03067b64a4f22d4c58410fc5237060d0c15b81e58c23921c41acc60abbdab490f1fdfcbd6408ede2d03ca704454272e0244d61a55
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "estree-walker@npm:2.0.2"
+  checksum: 10c0/53a6c54e2019b8c914dc395890153ffdc2322781acf4bd7d1a32d7aedc1710807bdcd866ac133903d5629ec601fbb50abe8c2e5553c7f5a0afdd9b6af6c945af
   languageName: node
   linkType: hard
 
@@ -7696,7 +7728,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.10.0, resolve@npm:^1.17.0, resolve@npm:^1.19.0, resolve@npm:^1.20.0":
+"resolve@npm:^1.10.0, resolve@npm:^1.19.0, resolve@npm:^1.20.0, resolve@npm:^1.22.1":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -7709,7 +7741,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.17.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.19.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.19.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:

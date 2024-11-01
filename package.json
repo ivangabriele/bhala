@@ -31,7 +31,7 @@
     "@ivangabriele/semantic-release-config-base": "2.1.0",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.5.0",
-    "@types/node": "16.18.105",
+    "@types/node": "22.8.6",
     "colorette": "2.0.20",
     "concurrently": "7.6.0",
     "husky": "8.0.3",

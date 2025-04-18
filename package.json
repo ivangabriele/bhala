@@ -29,7 +29,7 @@
     "@ivangabriele/commitlint-config": "1.1.0",
     "@ivangabriele/prettier-config": "5.0.1",
     "@ivangabriele/semantic-release-config-base": "2.1.0",
-    "@rollup/plugin-node-resolve": "13.3.0",
+    "@rollup/plugin-node-resolve": "16.0.1",
     "@rollup/plugin-typescript": "8.5.0",
     "@types/node": "16.18.126",
     "colorette": "2.0.20",

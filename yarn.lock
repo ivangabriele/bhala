@@ -530,12 +530,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:17.6.6":
-  version: 17.6.6
-  resolution: "@commitlint/config-conventional@npm:17.6.6"
+"@commitlint/config-conventional@npm:18.6.0":
+  version: 18.6.0
+  resolution: "@commitlint/config-conventional@npm:18.6.0"
   dependencies:
-    conventional-changelog-conventionalcommits: "npm:^5.0.0"
-  checksum: 10c0/1f0c1288404caf9565ed3dc186f67f4c84197a3c5a3d422e02a8442b26a798da3b524c48ddaf195d5121577323fc37b68c5efc53dbca7f0004140e328f941e90
+    conventional-changelog-conventionalcommits: "npm:^7.0.2"
+  checksum: 10c0/656ad2d64468da3087f46abeaf09574de7b2a649eac14f4710d06cbd3d6a6085aacb0c498a8b2ac86ca66503774344fa3b2cb2070d66eac5a3c0c5adc91e132e
   languageName: node
   linkType: hard
 
@@ -786,12 +786,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivangabriele/commitlint-config@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@ivangabriele/commitlint-config@npm:1.1.0"
+"@ivangabriele/commitlint-config@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@ivangabriele/commitlint-config@npm:2.0.3"
   dependencies:
-    "@commitlint/config-conventional": "npm:17.6.6"
-  checksum: 10c0/c3967be7266be317eb440401a3b023ae02cc9fc0e54368a4717e1f8ca78d8f3ae2c45892b3e066ff97016d914a2ac0f20a992e5cd251304c88aaef1512fa0b2e
+    "@commitlint/config-conventional": "npm:18.6.0"
+  peerDependencies:
+    "@commitlint/cli": ^18
+    husky: ^9
+  checksum: 10c0/1ab25a844729ff9c74af03576270338a1cfcad2615d19db37a7a20bd95ce9f353c965774c7252a4f164831eb92047ee6d36c71636fd8d3b55f29a9eef46db0ec
   languageName: node
   linkType: hard
 
@@ -2461,7 +2464,7 @@ __metadata:
     "@commitlint/cli": "npm:19.8.0"
     "@commitlint/config-conventional": "npm:19.8.0"
     "@ivangabriele/biome-config": "npm:1.5.0"
-    "@ivangabriele/commitlint-config": "npm:1.1.0"
+    "@ivangabriele/commitlint-config": "npm:2.0.3"
     "@ivangabriele/prettier-config": "npm:5.0.1"
     "@ivangabriele/semantic-release-config-base": "npm:2.1.0"
     "@rollup/plugin-node-resolve": "npm:16.0.1"
@@ -3130,17 +3133,6 @@ __metadata:
   dependencies:
     compare-func: "npm:^2.0.0"
   checksum: 10c0/90e73e25e224059b02951b6703b5f8742dc2a82c1fea62163978e6735fd3ab04350897a8fc6f443ec6b672d6b66e28a0820e833e544a0101f38879e5e6289b7e
-  languageName: node
-  linkType: hard
-
-"conventional-changelog-conventionalcommits@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "conventional-changelog-conventionalcommits@npm:5.0.0"
-  dependencies:
-    compare-func: "npm:^2.0.0"
-    lodash: "npm:^4.17.15"
-    q: "npm:^1.5.1"
-  checksum: 10c0/02cc9313b44953332e9d45833615675cbc4d0f4129b27ea7218f8f4fc2f35124748725969c0cb3dc645713d19684540b87c5af25bd17ce3dccd7ef4e05e42442
   languageName: node
   linkType: hard
 
